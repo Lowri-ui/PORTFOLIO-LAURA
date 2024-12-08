@@ -1,0 +1,122 @@
+/* General */
+body {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif; /* Aplica Oswald solo al h1 */
+    font-size: 3rem; /* Ajusta el tamaño */
+    color: #333; /* Define el color del texto */
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #da7a98;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #8b485d;
+    color: rgb(240, 208, 227);
+    border-radius: 5px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    border-radius: 50%;
+    border: 3px solid #8b485d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes mover {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.section {
+    display: none; /* Todas las secciones están ocultas por defecto */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.section.active {
+    display: block; /* Solo la sección activa es visible */
+    animation: mover 0.5s ease-out; /* Aplica la animación al mostrarse */
+    opacity: 1; /* Asegura que permanezca visible */
+    transform: translateY(0); /* Asegura que no se mueva al estado inicial */
+}
+
+
+
+.project {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
